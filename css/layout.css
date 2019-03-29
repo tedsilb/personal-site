@@ -325,35 +325,35 @@ ul#nav li.current a { color: #F06000; }
    border-radius: 3px 0 0 3px;
 }
 
-.photoshop {
+.skill1 {
+  	width: 85%;
+  	-moz-animation: skill1 2s ease;
+  	-webkit-animation: skill1 2s ease;
+}
+.skill2 {
   	width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+  	-moz-animation: skill2 2s ease;
+  	-webkit-animation: skill2 2s ease;
 }
-.illustrator {
-  	width: 55%;
-  	-moz-animation: illustrator 2s ease;
-  	-webkit-animation: illustrator 2s ease;
+.skill3 {
+  	width: 75%;
+  	-moz-animation: skill3 2s ease;
+  	-webkit-animation: skill3 2s ease;
 }
-.wordpress {
-  	width: 50%;
-  	-moz-animation: wordpress 2s ease;
-  	-webkit-animation: wordpress 2s ease;
+.skill4 {
+  	width: 60%;
+  	-moz-animation: skill4 2s ease;
+  	-webkit-animation: skill4 2s ease;
 }
-.css {
-  	width: 90%;
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
+.skill5 {
+  	width: 45%;
+  	-moz-animation: skill5 2s ease;
+  	-webkit-animation: skill5 2s ease;
 }
-.html5 {
-  	width: 80%;
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
-}
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+.skill6 {
+  	width: 60%;
+  	-moz-animation: skill6 2s ease;
+  	-webkit-animation: skill6 2s ease;
 }
 
 @-moz-keyframes photoshop {
@@ -650,7 +650,7 @@ call-to-action .button {
    padding-bottom: 66px;
 }
 #testimonials h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;   
+   font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 3px;
    color: #fff;
