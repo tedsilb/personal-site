@@ -1,3 +1,30 @@
+/* Add some padding around the buttons in the expanded portfolio items */
 .modal-button-padding {
-  padding: 15px;
+  padding: 15px 5px;
+}
+
+/* Add some shading to make the nav bar stand out against the bright header */
+.nav-shade-box {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Add some shading to make the main text stand out against the bright header */
+.banner-shade-box {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
+}
+
+/* Brighten <hr /> in the main banner */
+#banner-hr {
+  border-color: rgba(150, 150, 150, .5);
+}
+
+/* Edit colours to be more visible on light image */
+.custom-headline-colours {
+  color: #E0E0E0 !important;
+}
+.custom-headline-colours > span {
+  color: #FFFFFF !important;
+}
+.custom-headline-colours > a {
+  color: #FFFFFF !important;
 }
