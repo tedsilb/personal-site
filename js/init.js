@@ -128,7 +128,7 @@
       controlNav: true,
       directionNav: false,
       smoothHeight: true,
-      slideshowSpeed: 7000,
+      slideshowSpeed: 9000,
       animationSpeed: 600,
       randomize: false,
    });
@@ -161,7 +161,7 @@
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
+               $('#message-success').fadeIn();
             }
             // There was an error
             else {
