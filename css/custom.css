@@ -5,12 +5,16 @@
 
 /* Add some shading to make the nav bar stand out against the bright header */
 .nav-shade-box {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 /* Add some shading to make the main text stand out against the bright header */
 .banner-shade-box {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
+}
+
+.banner-shade-box > div > h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* Brighten <hr /> in the main banner */
@@ -21,10 +25,13 @@
 /* Edit colours to be more visible on light image */
 .custom-headline-colours {
   color: #E0E0E0 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .custom-headline-colours > span {
   color: #FFFFFF !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .custom-headline-colours > a {
   color: #FFFFFF !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
