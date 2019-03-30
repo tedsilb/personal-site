@@ -35,3 +35,21 @@
   color: #FFFFFF !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+
+/* Decrease room below email (before LinkedIn link) */
+#room-below-email {
+  margin-bottom: 7px;
+}
+
+/* Make resume headers a little bigger, decrease top padding */
+#resume h1 span {
+  font-size: 115%;
+}
+#resume .header-col {
+  padding-top: 1px;
+}
+
+/* Make education subheader smaller */
+.edu-subheader-small {
+  font-size: 75%;
+}
