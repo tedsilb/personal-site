@@ -68,13 +68,27 @@
   <section id="about">
     <div class="row">
       <div class="three columns">
-        <img class="profile-pic"  src="images/profile.jpg" alt="" />
+        <img class="profile-pic" src="images/profile.jpg" alt="" />
       </div>
 
       <div class="nine columns main-col">
         <h2>About Me</h2>
-        <p>
-
+        <p id="about-me-text">
+          Hi there, I'm Ted.
+          (My real name is Thomas, but I go by Ted).
+          I'm from a small town in central Wisconsin and am currently attending
+            Creighton University in Omaha, Nebraska.
+          I like playing competitive Overwatch, playing Beat Saber, swimming, and watching movies.
+          Most importantly, I enjoy spending time with my family and friends.
+          Please feel free to connect with me on
+            <a href="https://www.linkedin.com/in/ted-silbernagel/">
+              LinkedIn
+            </a>
+            , and check out my
+            <a href="https://github.com/tedsilb">
+              GitHub
+            </a>
+            - there are some fun projects there that I've been working on!
         </p>
 
         <div class="row">
@@ -117,7 +131,7 @@
               <em class="date">Graduating May 2019</em>
             </p>
             <p>
-              I'm currently studying at Creighton University with a double major
+              I'm a senior studying at Creighton University with a double major
                 in Business Intelligence & Analytics and Economics.
               I also have a minor in Political Science and am on track to graduate <i>summa cum laude</i>.
               While I enjoy economics, BIA is my primary major and my main area of focus.
@@ -149,8 +163,9 @@
                 and
                 <a href="https://www.ucl.ac.uk/political-science/people/teaching/nick-wright">
                   Dr Nick Wright
-                </a>
-                .
+                </a>.
+                I really enjoyed this experience - I learned a lot about UK and EU politics,
+                  but most importantly was able to gain a new perspective with which to view issues and events.
             </p>
           </div>
         </div> <!-- End item -->
@@ -289,6 +304,21 @@
                 </a>
             </div>
           </div> <!-- End item -->
+
+          <div class="columns portfolio-item">
+            <div class="item-wrap">
+                <a href="#modal-04" title="">
+                  <img alt="" src="images/portfolio/pubsafe-logo.jpg">
+                  <div class="overlay">
+                    <div class="portfolio-item-meta">
+                      <h5>Public Safety Website</h5>
+                      <p>University Project</p>
+                    </div>
+                  </div>
+                  <div class="link-icon"><i class="icon-plus"></i></div>
+                </a>
+            </div>
+          </div> <!-- End item -->
         </div> <!-- End portfolio-wrapper -->
       </div> <!-- End twelve columns -->
 
@@ -342,10 +372,10 @@
           <h3>Winger</h3>
           <p>
             In the fall of 2018, two teammates and I created a marketplace mobile web app
-              for Creighton University.
+              for BIA 375: Business Application Development.
             It is live - both the webserver and database are hosted on a Google Cloud Platform VM
               and protected by CloudFlare.
-            It integrates into the CU login system.
+            It integrates into the Creighton University login system.
             Check it out, and if you have a Creighton login, try it out!
             Looks best on mobile.
           </p>
@@ -360,6 +390,31 @@
           <a class="popup-modal-dismiss modal-button-padding">Close</a>
         </div>
       </div> <!-- End modal-03 -->
+
+      <div id="modal-04" class="popup-modal mfp-hide">
+        <img class="scale-with-grid" src="images/portfolio/modals/m-pubsafe.png" alt="" />
+
+        <div class="description-box">
+          <h3>Public Safety Parking Management System</h3>
+          <p>
+            In the spring of 2018, three teammates and I created a database-driven website for
+              Creighton University's Department of Public Safety.
+            It would allow them to manage how many vehicles are in each parking lot,
+              view a Google Map of all parking lot locations,
+              check to see where a student is parked, and more.
+            This website was written in PHP and used some JavaScript with AJAX.
+            This was a project for BIA 354: Data and Information Management.
+          </p>
+          <span class="categories">
+            <i class="fa fa-tag"></i>
+            Projects
+          </span>
+        </div>
+
+        <div class="link-box">
+          <a class="popup-modal-dismiss modal-button-padding">Close</a>
+        </div>
+      </div> <!-- End modal-04 -->
     </div> <!-- End row -->
   </section> <!-- Portfolio Section End-->
 
@@ -413,7 +468,7 @@
           </div> <!-- End div.flexslider -->
         </div> <!-- End div.flex-container -->
       </div> <!-- End row -->
-    </div>  <!-- End text-container -->
+    </div> <!-- End text-container -->
   </section> <!-- Testimonials Section End-->
 
   <!-- Footer -->
