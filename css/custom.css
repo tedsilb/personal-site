@@ -3,9 +3,13 @@ body {
   color: #60676d;
 }
 
-/* Add some padding around the buttons in the expanded portfolio items */
-.modal-button-padding {
-  padding: 15px 5px;
+/* Change nav button colour */
+ul#nav li.current a {
+  color: #55c5ff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+#nav-wrap > a.mobile-btn {
+  background-color: #00a8ff;
 }
 
 /* Add some shading to make the nav bar stand out against the bright header */
@@ -17,14 +21,16 @@ body {
 .banner-shade-box {
   background-image: radial-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
 }
-
 .banner-shade-box > div > h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Brighten <hr /> in the main banner */
-#banner-hr {
-  border-color: rgba(150, 150, 150, .5);
+/* Put name on newline if on mobile */
+@media only screen and (max-width: 1138px) and (min-width: 348px) {
+  #headline-name::before {
+    content: "\A";
+    white-space: pre;
+  }
 }
 
 /* Edit colours to be more visible on light image */
@@ -41,7 +47,27 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Lighten about text */
+/* Brighten <hr /> in the main banner */
+#banner-hr {
+  border-color: rgba(150, 150, 150, .5);
+}
+
+/* Make social buttons bigger, add more spacing on mobile */
+.social > li > a > i {
+  font-size: 125%;
+}
+@media only screen and (max-width: 767px) {
+  .social > li {
+    margin: 0 10px !important;
+  }
+}
+
+/* Change colour of scroll down button */
+header .scrolldown a:hover {
+  color: #55c5ff;
+}
+
+/* Lighten About text */
 #about p {
   color: #9e9e9e;
 }
@@ -64,9 +90,50 @@ body {
   padding-top: 1px;
 }
 
+/* Change resume header bottom border colour */
+#resume h1 span {
+  border-bottom-color: #55c5ff;
+}
+
+/* Add a little space between resume row items */
+.resume-row-wrapper > div:first-child > div > p:last-child {
+  margin-bottom: 40px;
+}
+
 /* Make education subheader smaller */
-.edu-subheader-small {
+.resume-subheader-small {
   font-size: 75%;
+}
+
+/* Add line break before resume subheader if on mobile */
+@media only screen and (min-width: 768px) {
+  .resume-subheader-small::before {
+    content: " ";
+    white-space: pre;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .resume-subheader-small::before {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+/* Use bullet OR line break depending on platform */
+@media only screen and (min-width: 768px) {
+  .resume-sub-bullet::before {
+    content: "•";
+    white-space: pre;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .resume-sub-date::before {
+    content: "\A";
+    white-space: pre;
+  }
+  .resume-sub-bullet {
+    display: none;
+  }
 }
 
 /* Decrease bottom margin of quote text */
@@ -77,6 +144,29 @@ body {
 /* Darken portfolio header text */
 #portfolio h1 {
   color: #676e73;
+}
+
+/* Make portfolio items smaller on mobile */
+@media only screen and (max-width: 767px) {
+  .portfolio-item > div > a > img {
+    max-width: 70%;
+  }
+  .portfolio-item > div {
+    text-align: center;
+  }
+}
+
+/* Make background of items a light grey */
+.portfolio-item > div > a > img {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.portfolio-item .item-wrap {
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+/* Add some padding around the buttons in the expanded portfolio items */
+.modal-button-padding {
+  padding: 15px 5px;
 }
 
 /* Darken more portfolio stuff */
