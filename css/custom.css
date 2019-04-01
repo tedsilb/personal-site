@@ -69,6 +69,11 @@ body {
   font-size: 75%;
 }
 
+/* Decrease bottom margin of quote text */
+#testimonials blockquote p {
+  margin-bottom: 20px;
+}
+
 /* Darken portfolio header text */
 #portfolio h1 {
   color: #676e73;
