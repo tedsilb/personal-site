@@ -53,3 +53,8 @@
 .edu-subheader-small {
   font-size: 75%;
 }
+
+/* Decrease bottom margin of quote text */
+#testimonials blockquote p {
+  margin-bottom: 20px;
+}
