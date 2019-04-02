@@ -62,14 +62,22 @@ ul#nav li.current a {
   }
 }
 
-/* Change colour of scroll down button */
+/* Change colour of scroll down button, make it a little bigger */
 header .scrolldown a:hover {
   color: #55c5ff;
+}
+header .scrolldown a {
+  font-size: 350%;
 }
 
 /* Lighten About text */
 #about p {
   color: #9e9e9e;
+}
+
+/* Change About link colour */
+#about a:hover {
+  color: #55c5ff;
 }
 
 /* Make a little more room between about text and Get in Touch area */
@@ -93,6 +101,14 @@ header .scrolldown a:hover {
 /* Change resume header bottom border colour */
 #resume h1 span {
   border-bottom-color: #55c5ff;
+}
+
+/* Change resume link colour */
+#resume a, #resume a:visited {
+  color: #55c5ff;
+}
+#resume a:hover {
+  color: #2f3640;
 }
 
 /* Add a little space between resume row items */
@@ -190,6 +206,16 @@ header .scrolldown a:hover {
 }
 .popup-modal .description-box .categories {
   color: #777777;
+}
+
+/* Lighten footer link hover colour */
+footer a:hover {
+  color: #dcdde1;
+}
+
+/* Change colour of scroll up button */
+footer > div > #go-top > a:hover {
+  background-color: #55c5ff;
 }
 
 /* Disable text selection for various elements */
