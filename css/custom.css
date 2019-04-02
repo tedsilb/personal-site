@@ -9,7 +9,7 @@ ul#nav li.current a {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 #nav-wrap > a.mobile-btn {
-  background-color: #00a8ff;
+  background-color: #55c5ff;
 }
 
 /* Add some shading to make the nav bar stand out against the bright header */
@@ -46,6 +46,9 @@ ul#nav li.current a {
   color: #FFFFFF !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+.banner-text > h3 > a:hover {
+  color: #55c5ff !important;
+}
 
 /* Brighten <hr /> in the main banner */
 .banner > .banner-text > hr {
@@ -60,6 +63,11 @@ ul#nav li.current a {
   .social > li {
     margin: 0 10px !important;
   }
+}
+
+/* Change social link hover colour */
+.social > li > a:hover {
+  color: #55c5ff !important;
 }
 
 /* Change colour of scroll down button, make it a little bigger */
@@ -185,7 +193,7 @@ header .scrolldown a {
 
 /* Add some padding around the buttons in the expanded portfolio items */
 .popup-modal .link-box a:hover {
-  color: #00a8ff;
+  color: #55c5ff;
 }
 .popup-modal .link-box a {
   padding: 15px 5px;
