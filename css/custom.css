@@ -13,42 +13,42 @@ ul#nav li.current a {
 }
 
 /* Add some shading to make the nav bar stand out against the bright header */
-.nav-shade-box {
+#nav-wrap {
   background: rgba(0, 0, 0, 0.45);
 }
 
 /* Add some shading to make the main text stand out against the bright header */
-.banner-shade-box {
+.banner {
   background-image: radial-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
 }
-.banner-shade-box > div > h1 {
+.banner > div > h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* Put name on newline if on mobile */
 @media only screen and (max-width: 1138px) and (min-width: 348px) {
-  #headline-name::before {
+  .responsive-headline > span::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 /* Edit colours to be more visible on light image */
-.custom-headline-colours {
+.banner-text > h3 {
   color: #E0E0E0 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-.custom-headline-colours > span {
+.banner-text > h3 > span {
   color: #FFFFFF !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-.custom-headline-colours > a {
+.banner-text > h3 > a {
   color: #FFFFFF !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* Brighten <hr /> in the main banner */
-#banner-hr {
+.banner > .banner-text > hr {
   border-color: rgba(150, 150, 150, .5);
 }
 
@@ -73,12 +73,12 @@ header .scrolldown a:hover {
 }
 
 /* Make a little more room between about text and Get in Touch area */
-#about-me-text {
+#about > .row > .main-col > p {
   margin-bottom: 40px;
 }
 
 /* Decrease room below email (before LinkedIn link) */
-#room-below-email {
+.contact-details > p:first-of-type {
   margin-bottom: 7px;
 }
 
@@ -96,24 +96,27 @@ header .scrolldown a:hover {
 }
 
 /* Add a little space between resume row items */
-.resume-row-wrapper > div:first-child > div > p:last-child {
+#resume > div > .main-col > div:first-child > div > p:last-child {
   margin-bottom: 40px;
+}
+#resume > div > .main-col > div > div > p:last-child {
+  margin-bottom: 30px;
 }
 
 /* Make education subheader smaller */
-.resume-subheader-small {
+#resume > .education > .main-col > div > div > h3 > span {
   font-size: 75%;
 }
 
-/* Add line break before resume subheader if on mobile */
+/* Add line break before resume subheader (school name) if on mobile */
 @media only screen and (min-width: 768px) {
-  .resume-subheader-small::before {
+  #resume > div > .main-col > div > div > h3 > span::before {
     content: " ";
     white-space: pre;
   }
 }
 @media only screen and (max-width: 767px) {
-  .resume-subheader-small::before {
+  #resume > div > .main-col > div > div > h3 > span::before {
     content: "\A";
     white-space: pre;
   }
@@ -121,17 +124,17 @@ header .scrolldown a:hover {
 
 /* Use bullet OR line break depending on platform */
 @media only screen and (min-width: 768px) {
-  .resume-sub-bullet::before {
+  #resume > div > .main-col > div > div > .info > span::before {
     content: "•";
     white-space: pre;
   }
 }
 @media only screen and (max-width: 767px) {
-  .resume-sub-date::before {
+  #resume > div > .main-col > div > div > .info > .date::before {
     content: "\A";
     white-space: pre;
   }
-  .resume-sub-bullet {
+  #resume > div > .main-col > div > div > .info > span {
     display: none;
   }
 }
@@ -165,8 +168,20 @@ header .scrolldown a:hover {
 }
 
 /* Add some padding around the buttons in the expanded portfolio items */
-.modal-button-padding {
+.popup-modal .link-box a:hover {
+  color: #00a8ff;
+}
+.popup-modal .link-box a {
   padding: 15px 5px;
+}
+
+/* Disable certain modal buttons */
+.modal-button-disabled {
+  cursor: default !important;
+  user-select: none;
+}
+.modal-button-disabled:hover {
+  color: #FFF !important;
 }
 
 /* Darken more portfolio stuff */
@@ -175,4 +190,9 @@ header .scrolldown a:hover {
 }
 .popup-modal .description-box .categories {
   color: #777777;
+}
+
+/* Disable text selection for various elements */
+.social, .profile-pic, .item-wrap, footer > .row > div:first-child {
+  user-select: none;
 }
