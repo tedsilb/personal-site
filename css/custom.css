@@ -227,6 +227,6 @@ footer > div > #go-top > a:hover {
 }
 
 /* Disable text selection for various elements */
-.social, .profile-pic, .item-wrap, footer > .row > div:first-child {
+.social, .profile-pic, .item-wrap, #nav-wrap, .social-links {
   user-select: none;
 }
