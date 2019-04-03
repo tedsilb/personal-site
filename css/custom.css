@@ -4,11 +4,11 @@ body {
 }
 
 /* Change nav button colour */
-ul#nav li.current a {
+#nav > .current > .smoothscroll {
   color: #55c5ff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-#nav-wrap > a.mobile-btn {
+#nav-wrap > .mobile-btn {
   background-color: #55c5ff;
 }
 
@@ -134,13 +134,13 @@ header .scrolldown a {
 
 /* Add line break before resume subheader (school name) if on mobile */
 @media only screen and (min-width: 768px) {
-  #resume > div > .main-col > div > div > h3 > span::before {
+  #resume > div > .main-col > div > div > h3:first-child > span::before {
     content: " ";
     white-space: pre;
   }
 }
 @media only screen and (max-width: 767px) {
-  #resume > div > .main-col > div > div > h3 > span::before {
+  #resume > div > .main-col > div > div > h3:first-child > span::before {
     content: "\A";
     white-space: pre;
   }
@@ -161,6 +161,17 @@ header .scrolldown a {
   #resume > div > .main-col > div > div > .info > span {
     display: none;
   }
+}
+
+/* If distinctions present, reduce bottom margin of edu description */
+.p-before-distinctions {
+  margin-bottom: 20px;
+}
+
+/* Reduce space between distinctions */
+.distinction {
+  margin-bottom: 12px;
+  line-height: 130%;
 }
 
 /* Decrease bottom margin of quote text */
