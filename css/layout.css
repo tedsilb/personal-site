@@ -357,27 +357,27 @@ ul#nav li.current a { color: #F06000; }
 }
 
 @keyframes skill1 {
-  0%   { width: 0; }
+  0   { width: 0; }
   100% { width: 85%; }
 }
 @keyframes skill2 {
-  0%   { width: 0; }
+  0   { width: 0; }
   100% { width: 50%; }
 }
 @keyframes skill3 {
-  0%   { width: 0; }
+  0   { width: 0; }
   100% { width: 75%; }
 }
 @keyframes skill4 {
-  0%   { width: 0; }
+  0   { width: 0; }
   100% { width: 55%; }
 }
 @keyframes skill5 {
-  0%   { width: 0; }
+  0   { width: 0; }
   100% { width: 40%; }
 }
 @keyframes skill6 {
-  0%   { width: 0; }
+  0   { width: 0; }
   100% { width: 50%; }
 }
 

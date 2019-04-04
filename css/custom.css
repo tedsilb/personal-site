@@ -19,7 +19,7 @@ body {
 
 /* Add some shading to make the main text stand out against the bright header */
 .banner {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.55) 0, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
 }
 .banner > div > h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);

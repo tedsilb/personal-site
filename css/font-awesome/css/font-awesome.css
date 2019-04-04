@@ -84,7 +84,7 @@
   animation: spin 2s infinite linear;
 }
 @-moz-keyframes spin {
-  0% {
+  0 {
     -moz-transform: rotate(0deg);
   }
   100% {
@@ -92,7 +92,7 @@
   }
 }
 @-webkit-keyframes spin {
-  0% {
+  0 {
     -webkit-transform: rotate(0deg);
   }
   100% {
@@ -100,7 +100,7 @@
   }
 }
 @-o-keyframes spin {
-  0% {
+  0 {
     -o-transform: rotate(0deg);
   }
   100% {
@@ -108,7 +108,7 @@
   }
 }
 @-ms-keyframes spin {
-  0% {
+  0 {
     -ms-transform: rotate(0deg);
   }
   100% {
@@ -116,7 +116,7 @@
   }
 }
 @keyframes spin {
-  0% {
+  0 {
     transform: rotate(0deg);
   }
   100% {
