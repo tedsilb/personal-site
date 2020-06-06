@@ -1,49 +1,44 @@
 // Init JS
 jQuery(document).ready(function($) {
-
   // FitText Settings
   setTimeout(function() {
-    $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
-    },
-    100
-  );
+    $('h1.responsive-headline')
+        .fitText(1, {minFontSize: '40px', maxFontSize: '90px'});
+  }, 100);
 
   // Smooth Scrolling
   $('.smoothscroll').on('click', function(e) {
     e.preventDefault();
-    let target = this.hash,
-    $target = $(target);
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
-        },
-      800,
-      'swing',
-      function () {
-        window.location.hash = target;
-      }
-    );
+    let target = this.hash, $target = $(target);
+    $('html, body')
+        .stop()
+        .animate({'scrollTop': $target.offset().top}, 800, 'swing', function() {
+          window.location.hash = target;
+        });
   });
 
   // Highlight the current section in the navigation bar
-  let sections = $("section");
-  let navigation_links = $("#nav-wrap a");
+  let sections = $('section');
+  let navigation_links = $('#nav-wrap a');
   sections.waypoint({
     handler: function(event, direction) {
       let active_section;
       active_section = $(this);
-      if (direction === "up") active_section = active_section.prev();
-      let active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
-      navigation_links.parent().removeClass("current");
-      active_link.parent().addClass("current");
-      },
-      offset: '35%'
+      if (direction === 'up') active_section = active_section.prev();
+      let active_link =
+          $('#nav-wrap a[href="#' + active_section.attr('id') + '"]');
+      navigation_links.parent().removeClass('current');
+      active_link.parent().addClass('current');
+    },
+    offset: '35%'
   });
 
-  // Make sure that #header-background-image height is equal to the browser height.
-  $('header').css({ 'height': $(window).height() });
+  // Make sure that #header-background-image height is equal to the browser
+  // height.
+  $('header').css({'height': $(window).height()});
   $(window).on('resize', function() {
-    $('header').css({ 'height': $(window).height() });
-    $('body').css({ 'width': $(window).width() })
+    $('header').css({'height': $(window).height()});
+    $('body').css({'width': $(window).width()})
   });
 
   // Fade In/Out Primary Navigation
@@ -65,7 +60,7 @@ jQuery(document).ready(function($) {
 
   // Modal Popup
   $('.item-wrap a').magnificPopup({
-    type:'inline',
+    type: 'inline',
     fixedContentPos: false,
     removalDelay: 200,
     showCloseBtn: false,
@@ -78,8 +73,8 @@ jQuery(document).ready(function($) {
 
   // Flexslider
   $('.flexslider').flexslider({
-    namespace: "flex-",
-    controlsContainer: ".flex-container",
+    namespace: 'flex-',
+    controlsContainer: '.flex-container',
     animation: 'slide',
     controlNav: true,
     directionNav: false,
@@ -96,11 +91,12 @@ jQuery(document).ready(function($) {
     let contactEmail = $('#contactForm #contactEmail').val();
     let contactSubject = $('#contactForm #contactSubject').val();
     let contactMessage = $('#contactForm #contactMessage').val();
-    let data = 'contactName=' + contactName + '&contactEmail=' + contactEmail
-                + '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
+    let data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
+        '&contactSubject=' + contactSubject +
+        '&contactMessage=' + contactMessage;
     $.ajax({
-      type: "POST",
-      url: "inc/sendEmail.php",
+      type: 'POST',
+      url: 'inc/sendEmail.php',
       data: data,
       success: function(msg) {
         // Message was sent
@@ -110,7 +106,7 @@ jQuery(document).ready(function($) {
           $('#contactForm').fadeOut();
           $('#message-success').fadeIn();
 
-        // There was an error
+          // There was an error
         } else {
           $('#image-loader').fadeOut();
           $('#message-warning').html(msg);
@@ -119,5 +115,5 @@ jQuery(document).ready(function($) {
       }
     });
     return false;
-   });
+  });
 });
