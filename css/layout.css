@@ -326,32 +326,32 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .skill1 {
-  width: 75%;
+  width: 85%;
   animation: skill1 2.5s ease;
   animation-delay: .20s;
 }
 .skill2 {
-  width: 75%;
+  width: 80%;
   animation: skill2 2.5s ease;
   animation-delay: .35s;
 }
 .skill3 {
-  width: 85%;
+  width: 45%;
   animation: skill3 2.5s ease;
   animation-delay: .50s;
 }
 .skill4 {
-  width: 75%;
+  width: 85%;
   animation: skill4 2.5s ease;
   animation-delay: .65s;
 }
 .skill5 {
-  width: 55%;
+  width: 75%;
   animation: skill5 2.5s ease;
   animation-delay: .80s;
 }
 .skill6 {
-  width: 40%;
+  width: 55%;
   animation: skill6 2.5s ease;
   animation-delay: .95s;
 }
