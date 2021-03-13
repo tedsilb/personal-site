@@ -545,10 +545,9 @@
         <ul class="copyright">
           <li>
             &copy;
+            <span id="copyright-year"></span>
             <script>
-              document.open();
-              document.write(new Date().getFullYear());
-              document.close();
+              document.getElementById('copyright-year').innerHTML = new Date().getFullYear();
             </script>
             Ted Silbernagel
           </li>
