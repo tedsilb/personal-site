@@ -1,32 +1,32 @@
 // Init JS
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {  // eslint-disable-line no-undef
   // FitText Settings
-  setTimeout(function() {
+  setTimeout(function () {
     $('h1.responsive-headline')
-        .fitText(1, {minFontSize: '40px', maxFontSize: '90px'});
+      .fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
   }, 100);
 
   // Smooth Scrolling
-  $('.smoothscroll').on('click', function(e) {
+  $('.smoothscroll').on('click', function (e) {
     e.preventDefault();
     let target = this.hash, $target = $(target);
     $('html, body')
-        .stop()
-        .animate({'scrollTop': $target.offset().top}, 800, 'swing', function() {
-          window.location.hash = target;
-        });
+      .stop()
+      .animate({ 'scrollTop': $target.offset().top }, 800, 'swing', function () {
+        window.location.hash = target;
+      });
   });
 
   // Highlight the current section in the navigation bar
   let sections = $('section');
   let navigation_links = $('#nav-wrap a');
   sections.waypoint({
-    handler: function(event, direction) {
+    handler: function (event, direction) {
       let active_section;
       active_section = $(this);
       if (direction === 'up') active_section = active_section.prev();
       let active_link =
-          $('#nav-wrap a[href="#' + active_section.attr('id') + '"]');
+        $('#nav-wrap a[href="#' + active_section.attr('id') + '"]');
       navigation_links.parent().removeClass('current');
       active_link.parent().addClass('current');
     },
@@ -35,14 +35,14 @@ jQuery(document).ready(function($) {
 
   // Make sure that #header-background-image height is equal to the browser
   // height.
-  $('header').css({'height': $(window).height()});
-  $(window).on('resize', function() {
-    $('header').css({'height': $(window).height()});
-    $('body').css({'width': $(window).width()})
+  $('header').css({ 'height': $(window).height() });
+  $(window).on('resize', function () {
+    $('header').css({ 'height': $(window).height() });
+    $('body').css({ 'width': $(window).width() })
   });
 
   // Fade In/Out Primary Navigation
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     let h = $('header').height();
     let y = $(window).scrollTop();
     let nav = $('#nav-wrap');
@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
     showCloseBtn: false,
     mainClass: 'mfp-fade'
   });
-  $(document).on('click', '.popup-modal-dismiss', function(e) {
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
   });
