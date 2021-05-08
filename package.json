@@ -1,0 +1,21 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Ted Silbernagel's personal website",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedsilb/personal-site.git"
+  },
+  "author": "tedsilb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tedsilb/personal-site/issues"
+  },
+  "homepage": "https://tedsilbernagel.pw",
+  "dependencies": {
+    "eslint": "^7.26.0"
+  }
+}

@@ -10,13 +10,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  lint-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
+      - uses: actions/cache@v2.1.5
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
 
-      - run: sudo apt update && sudo apt install eslint
-      - run: eslint .
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm ci
+      - run: npm run lint
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
