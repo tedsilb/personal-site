@@ -200,7 +200,7 @@ header .scrolldown a {
 
 /* Darken portfolio header text */
 #portfolio h1 {
-  color: #676e73;
+  color: #656c70;
 }
 
 /* Make portfolio items smaller on mobile */
@@ -244,6 +244,11 @@ header .scrolldown a {
 }
 .popup-modal .description-box .categories {
   color: #777777;
+}
+
+/* Darken footer text */
+footer .copyright li {
+  color: #9f9f9f;
 }
 
 /* Lighten footer link hover colour */
