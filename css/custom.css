@@ -251,6 +251,11 @@ footer .copyright li {
   color: #9f9f9f;
 }
 
+/* Remove text by footer icons */
+ul.social-links > li > a > i > span {
+  display: none;
+}
+
 /* Lighten footer link hover colour */
 footer a:hover {
   color: #dcdde1;
