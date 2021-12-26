@@ -4,7 +4,7 @@
 <metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
 <defs>
 <font id="fontello" horiz-adv-x="1000" >
-<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" font-display="swap" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="plus" unicode="&#xe800;" d="M0 209l0 282 359 0 0 359 282 0 0-359 359 0 0-282-359 0 0-359-282 0 0 359-359 0z" horiz-adv-x="1000" />
 
