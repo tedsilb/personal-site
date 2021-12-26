@@ -251,7 +251,8 @@ footer .copyright li {
   color: #9f9f9f;
 }
 
-/* Remove text by footer icons */
+/* Remove text by social icons */
+ul.social > li > a > i > span,
 ul.social-links > li > a > i > span {
   display: none;
 }
