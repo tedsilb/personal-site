@@ -1,51 +1,57 @@
 // Init JS
-jQuery(document).ready(function ($) {  // eslint-disable-line no-undef
+jQuery(document).ready(function($) {
   // FitText Settings
-  setTimeout(function () {
+  setTimeout(() => {
     $('h1.responsive-headline')
-      .fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
+        .fitText(1, {minFontSize: '40px', maxFontSize: '90px'});
   }, 100);
 
   // Smooth Scrolling
-  $('.smoothscroll').on('click', function (e) {
+  $('.smoothscroll').on('click', function(e) {
     e.preventDefault();
-    let target = this.hash, $target = $(target);
+    const target = this.hash;
+    const $target = $(target);
     $('html, body')
-      .stop()
-      .animate({ 'scrollTop': $target.offset().top }, 800, 'swing', function () {
-        window.location.hash = target;
-      });
+        .stop()
+        .animate(
+            {'scrollTop': $target.offset().top},
+            800,
+            'swing',
+            () => window.location.hash = target,
+        );
   });
 
   // Highlight the current section in the navigation bar
-  let sections = $('section');
-  let navigation_links = $('#nav-wrap a');
+  const sections = $('section');
+  const navigationLinks = $('#nav-wrap a');
   sections.waypoint({
-    handler: function (event, direction) {
-      let active_section;
-      active_section = $(this);
-      if (direction === 'up') active_section = active_section.prev();
-      let active_link =
-        $('#nav-wrap a[href="#' + active_section.attr('id') + '"]');
-      navigation_links.parent().removeClass('current');
-      active_link.parent().addClass('current');
+    handler: function(event, direction) {
+      let activeSection;
+      activeSection = $(this);
+      if (direction === 'up') {
+        activeSection = activeSection.prev();
+      }
+      const activeLink =
+          $('#nav-wrap a[href="#' + activeSection.attr('id') + '"]');
+      navigationLinks.parent().removeClass('current');
+      activeLink.parent().addClass('current');
     },
-    offset: '35%'
+    offset: '35%',
   });
 
   // Make sure that #header-background-image height is equal to the browser
   // height.
-  $('header').css({ 'height': $(window).height() });
-  $(window).on('resize', function () {
-    $('header').css({ 'height': $(window).height() });
-    $('body').css({ 'width': $(window).width() })
+  $('header').css({'height': $(window).height()});
+  $(window).on('resize', () => {
+    $('header').css({'height': $(window).height()});
+    $('body').css({'width': $(window).width()});
   });
 
   // Fade In/Out Primary Navigation
-  $(window).on('scroll', function () {
-    let h = $('header').height();
-    let y = $(window).scrollTop();
-    let nav = $('#nav-wrap');
+  $(window).on('scroll', () => {
+    const h = $('header').height();
+    const y = $(window).scrollTop();
+    const nav = $('#nav-wrap');
 
     if ((y > h * .20) && (y < h) && ($(window).outerWidth() > 768)) {
       nav.fadeOut('fast');
@@ -64,9 +70,9 @@ jQuery(document).ready(function ($) {  // eslint-disable-line no-undef
     fixedContentPos: false,
     removalDelay: 200,
     showCloseBtn: false,
-    mainClass: 'mfp-fade'
+    mainClass: 'mfp-fade',
   });
-  $(document).on('click', '.popup-modal-dismiss', function (e) {
+  $(document).on('click', '.popup-modal-dismiss', (e) => {
     e.preventDefault();
     $.magnificPopup.close();
   });

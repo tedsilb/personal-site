@@ -1,4 +1,3 @@
-/*global jQuery */
 /*eslint-disable */
 /*!
  * FitText.js 1.2
