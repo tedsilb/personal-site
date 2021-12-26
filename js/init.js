@@ -1,16 +1,15 @@
+import {fitText} from './fittext.js';
+
 // Init JS
 jQuery(document).ready(function($) {
   const body = document.getElementsByTagName('body')[0];
   const header = document.getElementById('home');
+  const headline = document.getElementsByClassName('responsive-headline')[0];
   const nav = document.getElementById('nav-wrap');
   const navLinks = nav.getElementsByTagName('a');
   const sections = document.getElementsByTagName('section');
 
-  // FitText Settings
-  setTimeout(() => {
-    $('h1.responsive-headline')
-        .fitText(1, {minFontSize: '40px', maxFontSize: '90px'});
-  }, 100);
+  fitText(headline, {minFontSize: '40px', maxFontSize: '90px'});
 
   // Highlight the current section in the navigation bar
   for (const section of [header, ...sections]) {
