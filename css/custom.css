@@ -250,6 +250,22 @@ header .scrolldown a {
   color: #777777;
 }
 
+/* Style tiny-slider nav buttons */
+.tns-nav > button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  margin-right: 9px;
+  border-radius: 100%;
+  border: none;
+  background-color: #2f3640;
+}
+
+/* Style tiny-slider selected nav button */
+.tns-nav > button.tns-nav-active {
+  background-color: white;
+}
+
 /* Darken footer text */
 footer .copyright li {
   color: #9f9f9f;
