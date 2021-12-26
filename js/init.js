@@ -1,7 +1,6 @@
 import {fitText} from './fittext.js';
 
-// Init JS
-jQuery(document).ready(function($) {
+$(function() {
   const body = document.getElementsByTagName('body')[0];
   const header = document.getElementById('home');
   const headline = document.getElementsByClassName('responsive-headline')[0];
