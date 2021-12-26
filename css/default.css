@@ -137,6 +137,7 @@ table {
 html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -803,4 +804,13 @@ properly.
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center !important;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.hide {
+  opacity: 0;
+  transition: opacity 200ms;
 }

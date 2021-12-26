@@ -6,21 +6,6 @@ jQuery(document).ready(function($) {
         .fitText(1, {minFontSize: '40px', maxFontSize: '90px'});
   }, 100);
 
-  // Smooth Scrolling
-  $('.smoothscroll').on('click', function(e) {
-    e.preventDefault();
-    const target = this.hash;
-    const $target = $(target);
-    $('html, body')
-        .stop()
-        .animate(
-            {'scrollTop': $target.offset().top},
-            800,
-            'swing',
-            () => window.location.hash = target,
-        );
-  });
-
   // Highlight the current section in the navigation bar
   const sections = $('section');
   const navigationLinks = $('#nav-wrap a');
@@ -39,27 +24,36 @@ jQuery(document).ready(function($) {
     offset: '35%',
   });
 
+  const header = document.getElementById('home');
+  const body = document.getElementsByTagName('body')[0];
+
   // Make sure that #header-background-image height is equal to the browser
   // height.
-  $('header').css({'height': $(window).height()});
-  $(window).on('resize', () => {
-    $('header').css({'height': $(window).height()});
-    $('body').css({'width': $(window).width()});
+  header.style.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    header.style.height = window.innerHeight;
+    body.style.width = window.innerWidth;
   });
 
   // Fade In/Out Primary Navigation
-  $(window).on('scroll', () => {
-    const h = $('header').height();
-    const y = $(window).scrollTop();
-    const nav = $('#nav-wrap');
+  document.addEventListener('scroll', () => {
+    const headerHeight = header.offsetHeight;
+    const scrollY = window.scrollY;
+    const nav = document.getElementById('nav-wrap');
 
-    if ((y > h * .20) && (y < h) && ($(window).outerWidth() > 768)) {
-      nav.fadeOut('fast');
+    if ((scrollY > headerHeight * .20) && (scrollY < headerHeight) &&
+        (window.outerWidth > 768)) {
+      nav.classList.remove('show');
+      nav.classList.add('hide');
     } else {
-      if (y < h * .20) {
-        nav.removeClass('opaque').fadeIn('fast');
+      if (scrollY < headerHeight * .20) {
+        nav.classList.remove('opaque');
+        nav.classList.remove('hide');
+        nav.classList.add('show');
       } else {
-        nav.addClass('opaque').fadeIn('fast');
+        nav.classList.remove('hide');
+        nav.classList.add('show');
       }
     }
   });
