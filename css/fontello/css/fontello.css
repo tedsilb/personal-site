@@ -2,14 +2,15 @@
   font-family: 'fontello';
   src: url('../font/fontello.eot?14870468');
   src: url('../font/fontello.eot?14870468#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?14870468') format('woff2'),
-       url('../font/fontello.woff?14870468') format('woff'),
-       url('../font/fontello.ttf?14870468') format('truetype'),
-       url('../font/fontello.svg?14870468#fontello') format('svg');
+    url('../font/fontello.woff2?14870468') format('woff2'),
+    url('../font/fontello.woff?14870468') format('woff'),
+    url('../font/fontello.ttf?14870468') format('truetype'),
+    url('../font/fontello.svg?14870468#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -55,6 +56,18 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-plus:before { content: '\e800'; } /* '' */
-.icon-down-circle:before { content: '\e801'; } /* '' */
-.icon-up-open:before { content: '\e803'; } /* '' */
+.icon-plus:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-down-circle:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-up-open:before {
+  content: '\e803';
+}
+
+/* '' */
