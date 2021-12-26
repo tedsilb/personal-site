@@ -435,61 +435,61 @@ ul#nav li.current a {
 }
 
 @keyframes skill1 {
-  0 {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 85%;
   }
 }
 
 @keyframes skill2 {
-  0 {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 50%;
   }
 }
 
 @keyframes skill3 {
-  0 {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 75%;
   }
 }
 
 @keyframes skill4 {
-  0 {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 55%;
   }
 }
 
 @keyframes skill5 {
-  0 {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 40%;
   }
 }
 
 @keyframes skill6 {
-  0 {
+  from {
     width: 0;
   }
 
-  100% {
+  to {
     width: 50%;
   }
 }
@@ -830,6 +830,7 @@ ul#nav li.current a {
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides>li {
   display: none;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
