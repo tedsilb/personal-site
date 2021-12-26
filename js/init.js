@@ -71,16 +71,15 @@ jQuery(document).ready(function($) {
     $.magnificPopup.close();
   });
 
-  // Flexslider
-  $('.flexslider').flexslider({
-    namespace: 'flex-',
-    controlsContainer: '.flex-container',
-    animation: 'slide',
-    controlNav: true,
-    directionNav: false,
-    smoothHeight: true,
-    slideshowSpeed: 9000,
-    animationSpeed: 600,
-    randomize: false,
+  // Tiny Slider
+  // https://github.com/ganlanyuan/tiny-slider
+  tns({
+    container: '.slides',
+    navPosition: 'bottom',
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoHeight: true,
+    controls: false,
+    autoplayButtonOutput: false,
   });
 });
