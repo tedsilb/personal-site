@@ -35,7 +35,7 @@ $(function() {
     body.style.width = window.innerWidth;
   });
 
-  // Fade In/Out Primary Navigation
+  // Hide nav bar while it's over header picture
   document.addEventListener('scroll', () => {
     const headerHeight = header.offsetHeight;
     const scrollY = window.scrollY;
