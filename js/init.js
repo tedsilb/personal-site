@@ -1,5 +1,11 @@
 // Init JS
 jQuery(document).ready(function($) {
+  const body = document.getElementsByTagName('body')[0];
+  const header = document.getElementById('home');
+  const nav = document.getElementById('nav-wrap');
+  const navLinks = nav.getElementsByTagName('a');
+  const sections = document.getElementsByTagName('section');
+
   // FitText Settings
   setTimeout(() => {
     $('h1.responsive-headline')
@@ -7,25 +13,20 @@ jQuery(document).ready(function($) {
   }, 100);
 
   // Highlight the current section in the navigation bar
-  const sections = $('section');
-  const navigationLinks = $('#nav-wrap a');
-  sections.waypoint({
-    handler: function(event, direction) {
-      let activeSection;
-      activeSection = $(this);
-      if (direction === 'up') {
-        activeSection = activeSection.prev();
-      }
-      const activeLink =
-          $('#nav-wrap a[href="#' + activeSection.attr('id') + '"]');
-      navigationLinks.parent().removeClass('current');
-      activeLink.parent().addClass('current');
-    },
-    offset: '35%',
-  });
-
-  const header = document.getElementById('home');
-  const body = document.getElementsByTagName('body')[0];
+  for (const section of [header, ...sections]) {
+    new Waypoint({
+      element: section,
+      handler: function(direction) {
+        const activeSection = direction === 'up' ? this.previous() : this;
+        const activeLink =
+            nav.querySelector(`a[href="#${activeSection.element.id}"]`);
+        for (const navLink of navLinks) {
+          navLink.parentElement.classList.remove('current');
+        }
+        activeLink.parentElement.classList.add('current');
+      },
+    });
+  }
 
   // Make sure that #header-background-image height is equal to the browser
   // height.
@@ -40,7 +41,6 @@ jQuery(document).ready(function($) {
   document.addEventListener('scroll', () => {
     const headerHeight = header.offsetHeight;
     const scrollY = window.scrollY;
-    const nav = document.getElementById('nav-wrap');
 
     if ((scrollY > headerHeight * .20) && (scrollY < headerHeight) &&
         (window.outerWidth > 768)) {
