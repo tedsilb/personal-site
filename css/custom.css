@@ -222,11 +222,15 @@ header .scrolldown a {
 }
 
 /* Add some padding around the buttons in the expanded portfolio items */
-.popup-modal .link-box a:hover {
+.popup-modal .link-box a:hover,
+.popup-modal .link-box button:hover {
   color: #55c5ff;
+  background-color: transparent;
 }
-.popup-modal .link-box a {
+.popup-modal .link-box a,
+.popup-modal .link-box button {
   padding: 15px 5px;
+  background-color: transparent;
 }
 
 /* Disable certain modal buttons */

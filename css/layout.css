@@ -532,7 +532,8 @@ ul#nav li.current a { color: #F06000; }
   background: #111;
   text-align: left;
 }
-.popup-modal .link-box a {
+.popup-modal .link-box a,
+.popup-modal .link-box button {
   color: #fff;
 	font: 11px/21px 'Open Sans', sans-serif;
   font-weight: bold;
