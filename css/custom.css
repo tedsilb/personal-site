@@ -4,11 +4,12 @@ body {
 }
 
 /* Change nav button colour */
-#nav > .current > .smoothscroll {
+#nav>.current>.smoothscroll {
   color: #55c5ff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-#nav-wrap > .mobile-btn {
+
+#nav-wrap>.mobile-btn {
   background-color: #55c5ff;
 }
 
@@ -21,52 +22,57 @@ body {
 .banner {
   background-image: radial-gradient(rgba(0, 0, 0, 0.55) 0, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.0) 70%);
 }
-.banner > div > h1 {
+
+.banner>div>h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* Put name on newline if on mobile */
 @media only screen and (max-width: 1138px) and (min-width: 348px) {
-  .responsive-headline > span::before {
+  .responsive-headline>span::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 /* Edit colours to be more visible on light image */
-.banner-text > h3 {
+.banner-text>h3 {
   color: #E0E0E0 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-.banner-text > h3 > span {
+
+.banner-text>h3>span {
   color: #FFFFFF !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-.banner-text > h3 > a {
+
+.banner-text>h3>a {
   color: #FFFFFF !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-.banner-text > h3 > a:hover {
+
+.banner-text>h3>a:hover {
   color: #55c5ff !important;
 }
 
 /* Brighten <hr /> in the main banner */
-.banner > .banner-text > hr {
+.banner>.banner-text>hr {
   border-color: rgba(150, 150, 150, .5);
 }
 
 /* Make social buttons bigger, add more spacing on mobile */
-.social > li > a > i {
+.social>li>a>i {
   font-size: 125%;
 }
+
 @media only screen and (max-width: 767px) {
-  .social > li {
+  .social>li {
     margin: 0 10px !important;
   }
 }
 
 /* Change social link hover colour */
-.social > li > a:hover {
+.social>li>a:hover {
   color: #55c5ff !important;
 }
 
@@ -74,6 +80,7 @@ body {
 header .scrolldown a:hover {
   color: #55c5ff;
 }
+
 header .scrolldown a {
   font-size: 350%;
 }
@@ -95,12 +102,12 @@ header .scrolldown a {
 }
 
 /* Make a little more room between about text and Get in Touch area */
-#about > .row > .main-col > p {
+#about>.row>.main-col>p {
   margin-bottom: 40px;
 }
 
 /* Decrease room below email (before LinkedIn link) */
-.contact-details > p:first-of-type {
+.contact-details>p:first-of-type {
   margin-bottom: 7px;
 }
 
@@ -108,6 +115,7 @@ header .scrolldown a {
 #resume h1 span {
   font-size: 115%;
 }
+
 #resume .header-col {
   padding-top: 1px;
 }
@@ -121,32 +129,35 @@ header .scrolldown a {
 #resume a, #resume a:visited {
   color: #2e7ca5;
 }
+
 #resume a:hover {
   color: #2f3640;
 }
 
 /* Add a little space between resume row items */
-#resume > div > .main-col > div:first-child > div > p:last-child {
+#resume>div>.main-col>div:first-child>div>p:last-child {
   margin-bottom: 40px;
 }
-#resume > div > .main-col > div > div > p:last-child {
+
+#resume>div>.main-col>div>div>p:last-child {
   margin-bottom: 30px;
 }
 
 /* Make education subheader smaller */
-#resume > .education > .main-col > div > div > h3 > span {
+#resume>.education>.main-col>div>div>h3>span {
   font-size: 75%;
 }
 
 /* Add line break before resume subheader (school name) if on mobile */
 @media only screen and (min-width: 768px) {
-  #resume > div > .main-col > div > div > h3:first-child > span::before {
+  #resume>div>.main-col>div>div>h3:first-child>span::before {
     content: " ";
     white-space: pre;
   }
 }
+
 @media only screen and (max-width: 767px) {
-  #resume > div > .main-col > div > div > h3:first-child > span::before {
+  #resume>div>.main-col>div>div>h3:first-child>span::before {
     content: "\A";
     white-space: pre;
   }
@@ -154,17 +165,19 @@ header .scrolldown a {
 
 /* Use bullet OR line break depending on platform */
 @media only screen and (min-width: 768px) {
-  #resume > div > .main-col > div > div > .info > span::before {
+  #resume>div>.main-col>div>div>.info>span::before {
     content: "•";
     white-space: pre;
   }
 }
+
 @media only screen and (max-width: 767px) {
-  #resume > div > .main-col > div > div > .info > .date::before {
+  #resume>div>.main-col>div>div>.info>.date::before {
     content: "\A";
     white-space: pre;
   }
-  #resume > div > .main-col > div > div > .info > span {
+
+  #resume>div>.main-col>div>div>.info>span {
     display: none;
   }
 }
@@ -181,7 +194,7 @@ header .scrolldown a {
 }
 
 /* Decrease space between main skill p and "here's how i'd rate myself" */
-#resume > .skill > .main-col > p:first-of-type {
+#resume>.skill>.main-col>p:first-of-type {
   margin-bottom: 20px;
 }
 
@@ -205,18 +218,20 @@ header .scrolldown a {
 
 /* Make portfolio items smaller on mobile */
 @media only screen and (max-width: 767px) {
-  .portfolio-item > div > a > img {
+  .portfolio-item>div>a>img {
     max-width: 70%;
   }
-  .portfolio-item > div {
+
+  .portfolio-item>div {
     text-align: center;
   }
 }
 
 /* Make background of items a light grey */
-.portfolio-item > div > a > img {
+.portfolio-item>div>a>img {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
 .portfolio-item .item-wrap {
   background-color: rgba(255, 255, 255, 0.0);
 }
@@ -227,6 +242,7 @@ header .scrolldown a {
   color: #55c5ff;
   background-color: transparent;
 }
+
 .popup-modal .link-box a,
 .popup-modal .link-box button {
   padding: 15px 5px;
@@ -238,6 +254,7 @@ header .scrolldown a {
   cursor: default !important;
   user-select: none;
 }
+
 .modal-button-disabled:hover {
   color: #FFF !important;
 }
@@ -246,12 +263,13 @@ header .scrolldown a {
 .popup-modal .description-box p {
   color: #777777;
 }
+
 .popup-modal .description-box .categories {
   color: #777777;
 }
 
 /* Style tiny-slider nav buttons */
-.tns-nav > button {
+.tns-nav>button {
   width: 12px;
   height: 12px;
   padding: 0;
@@ -262,7 +280,7 @@ header .scrolldown a {
 }
 
 /* Style tiny-slider selected nav button */
-.tns-nav > button.tns-nav-active {
+.tns-nav>button.tns-nav-active {
   background-color: white;
 }
 
@@ -272,8 +290,8 @@ footer .copyright li {
 }
 
 /* Remove text by social icons */
-ul.social > li > a > i > span,
-ul.social-links > li > a > i > span {
+ul.social>li>a>i>span,
+ul.social-links>li>a>i>span {
   display: none;
 }
 
@@ -283,7 +301,7 @@ footer a:hover {
 }
 
 /* Change colour of scroll up button */
-footer > div > #go-top > a:hover {
+footer>div>#go-top>a:hover {
   background-color: #55c5ff;
 }
 
