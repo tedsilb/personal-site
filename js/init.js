@@ -16,8 +16,7 @@ $(function() {
       element: section,
       handler: function(direction) {
         const activeSection = direction === 'up' ? this.previous() : this;
-        const activeLink =
-            nav.querySelector(`a[href="#${activeSection.element.id}"]`);
+        const activeLink = nav.querySelector(`a[href="#${activeSection.element.id}"]`);
         for (const navLink of navLinks) {
           navLink.parentElement.classList.remove('current');
         }
@@ -40,8 +39,7 @@ $(function() {
     const headerHeight = header.offsetHeight;
     const scrollY = window.scrollY;
 
-    if ((scrollY > headerHeight * .20) && (scrollY < headerHeight) &&
-        (window.outerWidth > 768)) {
+    if ((scrollY > headerHeight * .20) && (scrollY < headerHeight) && (window.outerWidth > 768)) {
       nav.classList.remove('show');
       nav.classList.add('hide');
     } else {
