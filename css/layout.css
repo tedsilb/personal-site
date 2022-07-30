@@ -141,7 +141,9 @@ header .scrolldown a:hover {
 
 /* primary navigation
 --------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+#nav-wrap ul,
+#nav-wrap li,
+#nav-wrap a {
   margin: 0;
   padding: 0;
   border: none;
@@ -225,11 +227,13 @@ ul#nav li.current a {
   overflow: hidden;
 }
 
-#about a, #about a:visited {
+#about a,
+#about a:visited {
   color: #fff;
 }
 
-#about a:hover, #about a:focus {
+#about a:hover,
+#about a:focus {
   color: #11ABB0;
 }
 
@@ -292,11 +296,13 @@ ul#nav li.current a {
   overflow: hidden;
 }
 
-#resume a, #resume a:visited {
+#resume a,
+#resume a:visited {
   color: #11ABB0;
 }
 
-#resume a:hover, #resume a:focus {
+#resume a:hover,
+#resume a:focus {
   color: #313131;
 }
 
@@ -325,7 +331,8 @@ ul#nav li.current a {
   padding-right: 10%;
 }
 
-.education, .work {
+.education,
+.work {
   margin-bottom: 48px;
   padding-bottom: 24px;
   border-bottom: 1px solid #E8E8E8;
@@ -399,39 +406,39 @@ ul#nav li.current a {
 }
 
 .skill1 {
-  width: 85%;
+  width: 80%;
   animation: skill1 2.5s ease;
-  animation-delay: .20s;
+  animation-delay: .80s;
 }
 
 .skill2 {
-  width: 80%;
+  width: 90%;
   animation: skill2 2.5s ease;
-  animation-delay: .35s;
+  animation-delay: .90s;
 }
 
 .skill3 {
-  width: 45%;
+  width: 90%;
   animation: skill3 2.5s ease;
-  animation-delay: .50s;
+  animation-delay: .90s;
 }
 
 .skill4 {
-  width: 85%;
+  width: 80%;
   animation: skill4 2.5s ease;
-  animation-delay: .65s;
+  animation-delay: .80s;
 }
 
 .skill5 {
-  width: 75%;
+  width: 80%;
   animation: skill5 2.5s ease;
   animation-delay: .80s;
 }
 
 .skill6 {
-  width: 55%;
+  width: 80%;
   animation: skill6 2.5s ease;
-  animation-delay: .95s;
+  animation-delay: .80s;
 }
 
 @keyframes skill1 {
@@ -440,7 +447,7 @@ ul#nav li.current a {
   }
 
   to {
-    width: 85%;
+    width: 80%;
   }
 }
 
@@ -450,7 +457,7 @@ ul#nav li.current a {
   }
 
   to {
-    width: 50%;
+    width: 90%;
   }
 }
 
@@ -460,7 +467,7 @@ ul#nav li.current a {
   }
 
   to {
-    width: 75%;
+    width: 90%;
   }
 }
 
@@ -470,7 +477,7 @@ ul#nav li.current a {
   }
 
   to {
-    width: 55%;
+    width: 80%;
   }
 }
 
@@ -480,7 +487,7 @@ ul#nav li.current a {
   }
 
   to {
-    width: 40%;
+    width: 80%;
   }
 }
 
@@ -490,7 +497,7 @@ ul#nav li.current a {
   }
 
   to {
-    width: 50%;
+    width: 80%;
   }
 }
 
@@ -923,11 +930,13 @@ footer {
   position: relative;
 }
 
-footer a, footer a:visited {
+footer a,
+footer a:visited {
   color: #525252;
 }
 
-footer a:hover, footer a:focus {
+footer a:hover,
+footer a:focus {
   color: #fff;
 }
 
