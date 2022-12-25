@@ -1,4 +1,4 @@
-import {fitText} from './fittext.js';
+import {fitText} from './dist/fittext.js';
 
 $(function() {
   const body = document.getElementsByTagName('body')[0];
@@ -8,7 +8,7 @@ $(function() {
   const navLinks = nav.getElementsByTagName('a');
   const sections = document.getElementsByTagName('section');
 
-  fitText(headline, {minFontSize: '40px', maxFontSize: '90px'});
+  fitText(headline, /* minFontSizePx= */ 40, /* maxFontSizePx= */ 90);
 
   // Highlight the current section in the navigation bar
   for (const section of [header, ...sections]) {

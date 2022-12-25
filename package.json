@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ted Silbernagel's personal website",
   "scripts": {
+    "build": "tsc",
     "lint": "eslint ."
   },
   "repository": {
@@ -15,8 +16,12 @@
     "url": "https://github.com/tedsilb/personal-site/issues"
   },
   "homepage": "https://tedsilbernagel.pw",
-  "dependencies": {
+  "devDependencies": {
+    "@types/jquery": "3.5.14",
+    "@typescript-eslint/eslint-plugin": "5.47.0",
+    "@typescript-eslint/parser": "5.47.0",
     "eslint": "8.30.0",
-    "eslint-config-google": "0.14.0"
+    "eslint-config-google": "0.14.0",
+    "typescript": "4.9.4"
   }
 }
