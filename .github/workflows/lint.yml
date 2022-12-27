@@ -28,11 +28,5 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Build
+      - name: Lint
         run: npm run lint
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          branch: gh-pages
-          folder: .
