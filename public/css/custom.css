@@ -126,7 +126,8 @@ header .scrolldown a {
 }
 
 /* Change resume link colour */
-#resume a, #resume a:visited {
+#resume a,
+#resume a:visited {
   color: #2e7ca5;
 }
 
@@ -290,7 +291,8 @@ footer .copyright li {
 }
 
 /* Darken footer links */
-footer a, footer visited {
+footer a,
+footer visited {
   color: #9f9f9f;
 }
 
@@ -311,6 +313,10 @@ footer>div>#go-top>a:hover {
 }
 
 /* Disable text selection for various elements */
-.social, .profile-pic, .item-wrap, #nav-wrap, .social-links {
+.social,
+.profile-pic,
+.item-wrap,
+#nav-wrap,
+.social-links {
   user-select: none;
 }

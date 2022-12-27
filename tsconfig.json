@@ -1,17 +1,25 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "ES2020",
-    /* Modules */
-    "module": "ES2022",
-    /* Emit */
-    "outDir": "js/dist",
-    /* Interop Constraints */
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    /* Type Checking */
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "moduleResolution": "Node",
     "strict": true,
-    /* Completeness */
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "src"
+  ]
 }
