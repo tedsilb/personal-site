@@ -1,10 +1,32 @@
-import {fitText} from './dist/fittext.js';
+import {tns} from 'tiny-slider';
+
+import {fitText} from './fittext';
+
+interface MagnificPopup {
+  (options: unknown): JQuery;
+  close(): void;
+}
+
+declare global {
+  interface JQuery {
+    magnificPopup: MagnificPopup;
+  }
+  interface JQueryStatic {
+    magnificPopup: MagnificPopup;
+  }
+}
 
 $(function() {
   const body = document.getElementsByTagName('body')[0];
   const header = document.getElementById('home');
-  const headline = document.getElementsByClassName('responsive-headline')[0];
+  if (header === null) {
+    throw new Error('home is null');
+  }
+  const headline = document.getElementsByClassName('responsive-headline')[0] as HTMLHeadingElement;
   const nav = document.getElementById('nav-wrap');
+  if (nav === null) {
+    throw new Error('nav-wrap is null');
+  }
   const navLinks = nav.getElementsByTagName('a');
   const sections = document.getElementsByTagName('section');
 
@@ -15,23 +37,25 @@ $(function() {
     new Waypoint({
       element: section,
       handler: function(direction) {
-        const activeSection = direction === 'up' ? this.previous() : this;
+        const activeSection = (direction === 'up' ? this.previous() : this) as Waypoint | null;
+        if (activeSection == null) {
+          return;
+        }
         const activeLink = nav.querySelector(`a[href="#${activeSection.element.id}"]`);
         for (const navLink of navLinks) {
-          navLink.parentElement.classList.remove('current');
+          navLink.parentElement?.classList.remove('current');
         }
-        activeLink.parentElement.classList.add('current');
+        activeLink?.parentElement?.classList.add('current');
       },
     });
   }
 
-  // Make sure that #header-background-image height is equal to the browser
-  // height.
-  header.style.height = window.innerHeight;
+  // Make sure that #header-background-image height is equal to the browser height.
+  header.style.height = window.innerHeight.toString();
 
   window.addEventListener('resize', () => {
-    header.style.height = window.innerHeight;
-    body.style.width = window.innerWidth;
+    header.style.height = window.innerHeight.toString();
+    body.style.width = window.innerWidth.toString();
   });
 
   // Hide nav bar while it's over header picture
