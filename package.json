@@ -18,16 +18,16 @@
   "bugs": {
     "url": "https://github.com/tedsilb/personal-site/issues"
   },
-  "homepage": "https://tedsilbernagel.pw",
+  "homepage": "https://tedsilb.com",
   "dependencies": {
     "tiny-slider": "2.9.4"
   },
   "devDependencies": {
     "@types/jquery": "3.5.16",
     "@types/waypoints": "4.0.4",
-    "@typescript-eslint/eslint-plugin": "5.48.1",
-    "@typescript-eslint/parser": "5.48.1",
-    "eslint": "8.31.0",
+    "@typescript-eslint/eslint-plugin": "5.48.2",
+    "@typescript-eslint/parser": "5.48.2",
+    "eslint": "8.32.0",
     "eslint-config-google": "0.14.0",
     "typescript": "4.9.4",
     "vite": "4.0.4"
