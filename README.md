@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/tedsilb/personal-site/actions/workflows/main.yml/badge.svg)](https://github.com/tedsilb/personal-site/actions/workflows/main.yml)
 
-[![CodeFactor](https://www.codefactor.io/repository/github/tedsilb/personal-site/badge)](https://www.codefactor.io/repository/github/tedsilb/personal-site) [![Total alerts](https://img.shields.io/lgtm/alerts/g/tedsilb/personal-site.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tedsilb/personal-site/alerts/)
+[![CodeFactor](https://www.codefactor.io/repository/github/tedsilb/personal-site/badge)](https://www.codefactor.io/repository/github/tedsilb/personal-site)
 
 My personal website - available at [tedsilb.com](https://tedsilb.com).
 
