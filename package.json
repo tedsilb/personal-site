@@ -30,6 +30,6 @@
     "eslint": "8.40.0",
     "eslint-config-google": "0.14.0",
     "typescript": "5.0.4",
-    "vite": "4.3.5"
+    "vite": "4.3.9"
   }
 }
