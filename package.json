@@ -23,13 +23,13 @@
     "tiny-slider": "2.9.4"
   },
   "devDependencies": {
-    "@types/jquery": "3.5.17",
-    "@types/waypoints": "4.0.4",
-    "@typescript-eslint/eslint-plugin": "6.4.1",
-    "@typescript-eslint/parser": "6.4.1",
-    "eslint": "8.47.0",
+    "@types/jquery": "3.5.29",
+    "@types/waypoints": "4.0.7",
+    "@typescript-eslint/eslint-plugin": "6.14.0",
+    "@typescript-eslint/parser": "6.14.0",
+    "eslint": "8.55.0",
     "eslint-config-google": "0.14.0",
-    "typescript": "5.1.6",
-    "vite": "4.4.9"
+    "typescript": "5.3.3",
+    "vite": "5.0.7"
   }
 }
