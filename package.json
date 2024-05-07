@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "preinstall": "npx only-allow pnpm",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tedsilb/personal-site.git"
