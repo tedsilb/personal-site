@@ -22,8 +22,8 @@ importers:
         specifier: 4.0.7
         version: 4.0.7
       typescript:
-        specifier: 5.5.3
-        version: 5.5.3
+        specifier: 5.5.4
+        version: 5.5.4
       vite:
         specifier: 5.3.2
         version: 5.3.2
@@ -347,8 +347,8 @@ packages:
   tiny-slider@2.9.4:
     resolution: {integrity: sha512-LAs2kldWcY+BqCKw4kxd4CMx2RhWrHyEePEsymlOIISTlOVkjfK40sSD7ay73eKXBLg/UkluAZpcfCstimHXew==}
 
-  typescript@5.5.3:
-    resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -609,7 +609,7 @@ snapshots:
 
   tiny-slider@2.9.4: {}
 
-  typescript@5.5.3: {}
+  typescript@5.5.4: {}
 
   vite@5.3.2:
     dependencies:
