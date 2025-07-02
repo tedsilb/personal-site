@@ -1,8 +1,8 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-	"organizeImports": { "enabled": true },
+	"$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"files": {
-		"ignore": ["dist/**", "public/**"]
+		"includes": ["**", "!**/dist/**", "!**/public/**"]
 	},
 	"linter": {
 		"enabled": true,
@@ -15,10 +15,13 @@
 			},
 			"correctness": {
 				"noPrecisionLoss": "error",
-				"noUnusedVariables": "error",
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"noNamespace": "error",
+				"useAsConstAssertion": "error",
 				"useArrayLiterals": "off"
 			},
-			"style": { "noNamespace": "error", "useAsConstAssertion": "error" },
 			"suspicious": {
 				"noExplicitAny": "error",
 				"noExtraNonNullAssertion": "error",
@@ -30,23 +33,20 @@
 	"javascript": { "globals": ["Atomics", "SharedArrayBuffer"] },
 	"overrides": [
 		{
-			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
 			"linter": {
 				"rules": {
 					"correctness": {
 						"noConstAssign": "off",
 						"noGlobalObjectCalls": "off",
 						"noInvalidConstructorSuper": "off",
-						"noInvalidNewBuiltin": "off",
-						"noNewSymbol": "off",
 						"noSetterReturn": "off",
 						"noUndeclaredVariables": "off",
 						"noUnreachable": "off",
-						"noUnreachableSuper": "off"
+						"noUnreachableSuper": "off",
+						"noInvalidBuiltinInstantiation": "off"
 					},
 					"style": {
-						"noArguments": "error",
-						"noVar": "error",
 						"useConst": "error"
 					},
 					"suspicious": {
@@ -57,29 +57,30 @@
 						"noImportAssign": "off",
 						"noRedeclare": "off",
 						"noUnsafeNegation": "off",
-						"useGetterReturn": "off"
+						"useGetterReturn": "off",
+						"noVar": "error"
+					},
+					"complexity": {
+						"noArguments": "error"
 					}
 				}
 			}
 		},
 		{
-			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
 			"linter": {
 				"rules": {
 					"correctness": {
 						"noConstAssign": "off",
 						"noGlobalObjectCalls": "off",
 						"noInvalidConstructorSuper": "off",
-						"noInvalidNewBuiltin": "off",
-						"noNewSymbol": "off",
 						"noSetterReturn": "off",
 						"noUndeclaredVariables": "off",
 						"noUnreachable": "off",
-						"noUnreachableSuper": "off"
+						"noUnreachableSuper": "off",
+						"noInvalidBuiltinInstantiation": "off"
 					},
 					"style": {
-						"noArguments": "error",
-						"noVar": "error",
 						"useConst": "error"
 					},
 					"suspicious": {
@@ -90,7 +91,11 @@
 						"noImportAssign": "off",
 						"noRedeclare": "off",
 						"noUnsafeNegation": "off",
-						"useGetterReturn": "off"
+						"useGetterReturn": "off",
+						"noVar": "error"
+					},
+					"complexity": {
+						"noArguments": "error"
 					}
 				}
 			}
