@@ -11,10 +11,8 @@ export function fitText(
 	maxFontSizePx?: number,
 ): void {
 	const compressor = 1;
-	const minFontSize =
-		minFontSizePx !== undefined ? minFontSizePx : Number.NEGATIVE_INFINITY;
-	const maxFontSize =
-		maxFontSizePx !== undefined ? maxFontSizePx : Number.POSITIVE_INFINITY;
+	const minFontSize = minFontSizePx !== undefined ? minFontSizePx : Number.NEGATIVE_INFINITY;
+	const maxFontSize = maxFontSizePx !== undefined ? maxFontSizePx : Number.POSITIVE_INFINITY;
 
 	const resize = () => {
 		const newFontSize = Math.max(

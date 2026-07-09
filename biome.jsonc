@@ -1,14 +1,20 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"files": {
-		"includes": ["**", "!**/dist/**", "!**/public/**"]
+		"includes": ["**", "!**/dist", "!**/public"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": false,
+			"preset": "recommended",
 			"complexity": {
+				"noArguments": "off",
 				"noBannedTypes": "error",
 				"noUselessThisAlias": "error",
 				"noUselessTypeConstraint": "error"
@@ -32,40 +38,6 @@
 	},
 	"javascript": { "globals": ["Atomics", "SharedArrayBuffer"] },
 	"overrides": [
-		{
-			"includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
-			"linter": {
-				"rules": {
-					"correctness": {
-						"noConstAssign": "off",
-						"noGlobalObjectCalls": "off",
-						"noInvalidConstructorSuper": "off",
-						"noSetterReturn": "off",
-						"noUndeclaredVariables": "off",
-						"noUnreachable": "off",
-						"noUnreachableSuper": "off",
-						"noInvalidBuiltinInstantiation": "off"
-					},
-					"style": {
-						"useConst": "error"
-					},
-					"suspicious": {
-						"noDuplicateClassMembers": "off",
-						"noDuplicateObjectKeys": "off",
-						"noDuplicateParameters": "off",
-						"noFunctionAssign": "off",
-						"noImportAssign": "off",
-						"noRedeclare": "off",
-						"noUnsafeNegation": "off",
-						"useGetterReturn": "off",
-						"noVar": "error"
-					},
-					"complexity": {
-						"noArguments": "error"
-					}
-				}
-			}
-		},
 		{
 			"includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
 			"linter": {

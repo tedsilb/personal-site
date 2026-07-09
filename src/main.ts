@@ -2,29 +2,13 @@ import { tns } from "tiny-slider";
 
 import { fitText } from "./fittext";
 
-interface MagnificPopup {
-	(options: unknown): JQuery;
-	close(): void;
-}
-
-declare global {
-	interface JQuery {
-		magnificPopup: MagnificPopup;
-	}
-	interface JQueryStatic {
-		magnificPopup: MagnificPopup;
-	}
-}
-
-$(function () {
+$(() => {
 	const body = document.getElementsByTagName("body")[0];
 	const header = document.getElementById("home");
 	if (header === null) {
 		throw new Error("home is null");
 	}
-	const headline = document.getElementsByClassName(
-		"responsive-headline",
-	)[0] as HTMLHeadingElement;
+	const headline = document.getElementsByClassName("responsive-headline")[0] as HTMLHeadingElement;
 	const nav = document.getElementById("nav-wrap");
 	if (nav === null) {
 		throw new Error("nav-wrap is null");
@@ -39,15 +23,11 @@ $(function () {
 		new Waypoint({
 			element: section,
 			handler: function (direction) {
-				const activeSection = (
-					direction === "up" ? this.previous() : this
-				) as Waypoint | null;
+				const activeSection = (direction === "up" ? this.previous() : this) as Waypoint | null;
 				if (activeSection == null) {
 					return;
 				}
-				const activeLink = nav.querySelector(
-					`a[href="#${activeSection.element.id}"]`,
-				);
+				const activeLink = nav.querySelector(`a[href="#${activeSection.element.id}"]`);
 				for (const navLink of navLinks) {
 					navLink.parentElement?.classList.remove("current");
 				}
@@ -69,11 +49,7 @@ $(function () {
 		const headerHeight = header.offsetHeight;
 		const scrollY = window.scrollY;
 
-		if (
-			scrollY > headerHeight * 0.2 &&
-			scrollY < headerHeight &&
-			window.outerWidth > 768
-		) {
+		if (scrollY > headerHeight * 0.2 && scrollY < headerHeight && window.outerWidth > 768) {
 			nav.classList.remove("show");
 			nav.classList.add("hide");
 		} else {
